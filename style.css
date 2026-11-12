@@ -1,0 +1,566 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --verde: #267653;
+  --verde-claro: #e8f4ec;
+  --texto: #24352c;
+  --fondo: #f8faf7;
+  --blanco: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: var(--blanco);
+  border-bottom: 1px solid #e5ebe5;
+}
+
+.escuela {
+  margin: 50px;
+  color: blue;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.raul {
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+  border-radius: 15px;
+  display: block;
+}
+
+.logo {
+  color: var(--verde);
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo span,
+.hero h1 span {
+  color: var(--blanco);
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--texto);
+}
+
+.hero {
+  display: flex;
+  padding: 80px 8%;
+  align-items: center;
+  background: #2C5271;
+}
+
+.hero-texto {
+  flex: 1.5;
+  color: white;
+}
+
+.hero-imagen {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.etiqueta {
+  color: #A52F13;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.15;
+  max-width: 750px;
+  margin: 20px auto;
+}
+
+.hero > p:not(.etiqueta) {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.boton {
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  background: #A52F13;
+  color: white;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.boton:hover {
+  background: #A52F13;
+}
+
+.seccion-calculadora {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1250px;
+  margin: 30px auto;
+  padding: 15px;
+}
+
+.cuadro-info {
+  flex: 1.7;
+  padding: 25px;
+  background-color: #2C5271;
+  border-radius: 12px;
+  color: white;
+}
+
+.cuadro-info h2 {
+  font-size: 29px;
+  font-family: 'Inter', sans-serif;
+}
+
+.parcela {
+  background-color: white;
+  padding: 10px;
+  margin-top: 19px;
+  border-radius: 10px;
+  border: 1px solid #B7B7B9;
+}
+
+.parcela h3 {
+  margin-top: 0;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.parcela p {
+  margin-bottom: 0;
+  line-height: 1;
+  font-size: 17px;
+  color: black;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.calculadora,
+.resultados {
+  flex: 2;
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 32px;
+  background: var(--blanco);
+  border-radius: 10px;
+  box-shadow: 0 8px 30px #203b2510;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 0;
+}
+
+h3 {
+  text-align: center;
+  color: #2C5271;
+}
+
+.subtitulo {
+  color: #68776d;
+}
+
+.campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d7e0d8;
+  border-radius: 9px;
+  background: white;
+  color: var(--texto);
+  font-size: 16px;
+  text-align: center;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid black;
+}
+
+.ancho-completo {
+  grid-column: 1 / -1;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.tarjeta {
+  padding: 22px;
+  border-radius: 14px;
+  background: #f0f4ef;
+}
+
+.destacado {
+  background: var(--verde-claro);
+}
+
+.tarjeta p {
+  margin-top: 0;
+}
+
+.tarjeta strong {
+  display: block;
+  font-size: 30px;
+  color: var(--verde);
+}
+
+.tarjeta span {
+  font-size: 13px;
+}
+
+.macros {
+  background: #f8faf7;
+  padding: 12px 20px;
+  border-radius: 12px;
+}
+
+.macros p {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.panel-macros {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.panel-macros h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.panel-macros > p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.macro {
+  margin-bottom: 20px;
+}
+
+.macro-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.barra {
+  width: 100%;
+  height: 13px;
+  background-color: #eeeeee;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progreso {
+  height: 100%;
+  width: 0%;
+  border-radius: 20px;
+  transition: width 0.8s ease;
+}
+
+.proteinas {
+  background-color: #39865A;
+}
+
+.grasas {
+  background-color: #D99A35;
+}
+
+.carbohidratos {
+  background-color: #5186D5;
+}
+
+.panel-imc {
+  background-color: #2C5271;
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 25px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  color: white;
+}
+
+.panel-imc h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.panel-imc > strong {
+  display: block;
+  font-size: 42px;
+  color: white;
+  margin: 10px 0;
+}
+
+.panel-imc h3 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.panel-imc p {
+  line-height: 1.5;
+}
+
+
+/* ================================= */
+/*         ADAPTACIÓN CELULAR        */
+/* ================================= */
+
+@media (max-width: 600px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Encabezado */
+
+  .encabezado {
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px 12px;
+  }
+
+  nav {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  /* Sección principal */
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 35px 20px;
+    gap: 20px;
+  }
+
+  .hero-imagen {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .raul {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+  }
+
+  .hero-texto {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 34px;
+    margin: 10px auto 20px;
+  }
+
+  .hero-texto p {
+    font-size: 15px;
+  }
+
+  .hero-texto .boton {
+    margin-top: 10px;
+  }
+
+  /* Calculadora y tabla */
+
+  .seccion-calculadora {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 25px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 12px;
+  }
+
+  .calculadora {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 22px 18px;
+  }
+
+  .cuadro-info {
+    width: 100%;
+    padding: 20px 15px;
+  }
+
+  .cuadro-info h2 {
+    font-size: 25px;
+  }
+
+  .parcela {
+    padding: 12px;
+    margin-top: 15px;
+  }
+
+  .parcela h3 {
+    font-size: 19px;
+  }
+
+  .parcela p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  /* Campos de la calculadora */
+
+  .campos {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .ancho-completo {
+    grid-column: auto;
+  }
+
+  .calculadora h2 {
+    font-size: 30px;
+  }
+
+  .calculadora .boton {
+    width: 100%;
+    padding: 14px 10px;
+  }
+
+  /* Resultados */
+
+  .resultados {
+    width: calc(100% - 24px);
+    max-width: none;
+    margin: 25px 12px;
+    padding: 22px 16px;
+  }
+
+  .resultados > h2 {
+    font-size: 30px;
+  }
+
+  .tarjetas {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .tarjeta {
+    padding: 18px;
+    text-align: center;
+  }
+
+  .tarjeta strong {
+    font-size: 27px;
+  }
+
+  .macros {
+    padding: 12px;
+  }
+
+  .macros p {
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  /* Panel de macronutrientes */
+
+  .panel-macros {
+    padding: 18px 14px;
+  }
+
+  .panel-macros h2 {
+    font-size: 25px;
+  }
+
+  .macro-info {
+    font-size: 14px;
+  }
+
+  /* Panel de IMC */
+
+  .panel-imc {
+    padding: 20px 14px;
+  }
+
+  .panel-imc h2 {
+    font-size: 23px;
+  }
+
+  .panel-imc > strong {
+    font-size: 36px;
+  }
+
+  .panel-imc p {
+    font-size: 14px;
+  }
+
+}
