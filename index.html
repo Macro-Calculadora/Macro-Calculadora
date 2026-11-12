@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macro Calculadora | Nutrición y Bienestar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#resultados">Resultados</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="inicio">
+        <div class="hero-imagen">
+    <img src="Imagenes/logoarino.jpg" alt="Mi imagen" class="raul">
+  </div>
+  <div class="hero-texto">
+    <h1>
+      <span>Conocé tus necesidades</span>
+      <span>nutricionales.</span>
+    </h1>
+    <p>
+      Calculá tus necesidades energéticas diarias
+    </p><p>
+      y conocé una distribución orientativa de tus macros.
+    </p>
+    <a class="boton" href="#calculadora">Comenzar cálculo</a>
+  </div>
+
+</section>
+
+    <section class="seccion-calculadora">
+
+    <section class="calculadora" id="calculadora">
+
+
+      <h2>Tu perfil nutricional</h2>
+
+      <form id="formulario">
+        <div class="campos">
+          <label>Edad (años)
+            <input type="number" id="edad" min="10" max="100"
+              placeholder="Ej. 25" required>
+          </label>
+
+          <label>Sexo para la fórmula
+            <select id="sexo" required>
+              <option value="" disabled selected hidden>Seleccionar</option>
+              <option value="mujer">Femenino</option>
+              <option value="varon">Masculino</option>
+            </select>
+          </label>
+
+          <label>Peso (kg)
+            <input type="number" id="peso" min="25" max="350"
+              step="0.1" placeholder="Ej. 70" required>
+          </label>
+
+          <label>Altura (cm)
+            <input type="number" id="altura" min="100" max="250"
+              placeholder="Ej. 170" required>
+          </label>
+
+          <label class="ancho-completo">Nivel de actividad física
+            <select id="actividad" required>
+              <option value="" disabled selected hidden>Seleccionar</option>
+              <option value="1.2">Sedentaria</option>
+              <option value="1.375">Actividad ligera</option>
+              <option value="1.55">Actividad moderada</option>
+              <option value="1.725">Actividad intensa</option>
+              <option value="1.9">Actividad muy intensa</option>
+            </select>
+          </label>
+
+        </div>
+
+        <button type="submit" class="boton">
+          Calcular mis necesidades
+        </button>
+      </form>
+    </section>
+
+
+
+       <div class="cuadro-info">
+ <h2> Tabla del nivel de actividad física</h2>
+
+  <div class="parcela">
+    <h3>Sedentario</h3>
+    <p>Poco o nada de ejercicio. Trabajo/estudio principalmente sentado.</p>
+  </div>
+
+  <div class="parcela">
+    <h3>Ligero</h3>
+    <p>Ejercicio ligero de 1 a 3 días/semana y vida cotidiana poco activa.</p>
+  </div>
+
+  <div class="parcela">
+    <h3>Moderado</h3>
+    <p>Ejercicio de 3 a 5 días/semana, caminatas o vida cotidiana relativamente activa.</p>
+  </div>
+
+  <div class="parcela">
+   <h3>Intenso</h3>
+   <p>Entrenamiento intenso 6 días/semana o trabajo físicamente activo + ejercicio.</p>
+  </div>
+
+  <div class="parcela">
+   <h3>Muy Intenso</h3>
+   <p>Entrenamiento muy exigente 7 días/semana y/o trabajo físico pesado.</p>
+  </div>
+
+</div>
+
+
+</section>
+    <section class="resultados" id="resultados" hidden>
+      <h2>Tus resultados estimados</h2>
+
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <p>Metabolismo basal</p>
+          <strong id="mb">—</strong>
+          <span>kcal por día</span>
+        </article>
+
+        <article class="tarjeta destacado">
+          <p>Gasto energético diario</p>
+          <strong id="get">—</strong>
+          <span>kcal por día</span>
+        </article>
+      </div>
+
+      <div class="macros">
+        <p>Proteínas <strong id="proteinas">—</strong></p>
+        <p>Carbohidratos <strong id="carbohidratos">—</strong></p>
+        <p>Grasas <strong id="grasas">—</strong></p>
+      </div>
+      <div class="panel-macros">
+
+  <h2>Distribución de macronutrientes</h2>
+  <p>Así se distribuyen tus calorías diarias:</p>
+
+  <div class="macro">
+    <div class="macro-info">
+      <span>Proteínas</span>
+      <span id="porcentajeProteinas">0%</span>
+    </div>
+    <div class="barra">
+      <div id="barraProteinas" class="progreso proteinas"></div>
+    </div>
+  </div>
+
+  <div class="macro">
+    <div class="macro-info">
+      <span>Grasas</span>
+      <span id="porcentajeGrasas">0%</span>
+    </div>
+    <div class="barra">
+      <div id="barraGrasas" class="progreso grasas"></div>
+    </div>
+  </div>
+
+  <div class="macro">
+    <div class="macro-info">
+      <span>Carbohidratos</span>
+      <span id="porcentajeCarbohidratos">0%</span>
+    </div>
+    <div class="barra">
+      <div id="barraCarbohidratos" class="progreso carbohidratos"></div>
+    </div>
+  </div>
+
+</div>
+<div class="panel-imc">
+  <h2>Evaluación orientativa del peso</h2>
+
+  <p>Tu Índice de Masa Corporal (IMC) es:</p>
+
+  <strong id="imcValor">—</strong>
+
+  <h3 id="imcCategoria">Esperando cálculo...</h3>
+
+  <p id="imcMensaje">
+    Completá la calculadora para conocer tu resultado.
+  </p>
+</div>
+    </section>
+  </main>
+</body>
+</html>
